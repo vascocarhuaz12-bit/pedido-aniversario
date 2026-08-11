@@ -4,6 +4,8 @@ const datosCliente = {
     // DATOS PRINCIPALES
     // =========================
 
+    tema: "romantico",
+
     nombre: "Tu morenito",
 
     fotoPrincipal: "imagenes/principal.png",
@@ -23,14 +25,39 @@ const datosCliente = {
 
 
     // =========================
-    // FOTOS
+    // MOMENTOS Y FOTOS
     // =========================
 
-    fotos: [
-        "imagenes/foto1.png",
-        "imagenes/foto2.png",
-        "imagenes/foto3.png",
-        "imagenes/foto4.png"
+    momentos: [
+
+        {
+            foto: "imagenes/foto1.png",
+            fecha: "Un recuerdo especial ❤️",
+            titulo: "Tú y yo",
+            texto: "Un momento que guardamos para siempre en nuestros corazones."
+        },
+
+        {
+            foto: "imagenes/foto2.png",
+            fecha: "Un momento más juntos ❤️",
+            titulo: "Nuestros recuerdos",
+            texto: "Cada fotografía guarda una historia y un momento especial de nuestra relación."
+        },
+
+        {
+            foto: "imagenes/foto3.png",
+            fecha: "Momentos inolvidables ❤️",
+            titulo: "Siempre juntos",
+            texto: "Hemos compartido momentos hermosos que siempre formarán parte de nuestra historia."
+        },
+
+        {
+            foto: "imagenes/foto4.png",
+            fecha: "Hasta aquí y mucho más ❤️",
+            titulo: "Nuestra historia continúa",
+            texto: "Y lo mejor es que todavía nos quedan muchísimos recuerdos por crear juntos."
+        }
+
     ],
 
 
@@ -52,6 +79,7 @@ const datosCliente = {
             "Te amo y deseo que sigamos creando muchos recuerdos más juntos. Feliz aniversario, mi amor. ❤️",
 
         firma: "Con todo mi amor ❤️"
+
     },
 
 
