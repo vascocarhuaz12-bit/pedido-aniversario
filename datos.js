@@ -1,70 +1,38 @@
 const datosCliente = {
-
-    tema: "romantico",
-
     nombre: "Tu morenito",
+    fechaInicio: "2020-01-11",
 
     fotoPrincipal: "imagenes/principal.png",
 
     mensajePortada:
-        "Feliz aniversario, mi amor ❤️ Gracias por cada momento, cada recuerdo y por todo lo que hemos construido juntos.",
+        "Hoy celebramos nuestro aniversario y todo lo hermoso que hemos construido juntos. ❤️",
 
     tituloHistoria: "Nuestra historia",
 
     mensajeHistoria:
         "Desde aquel 11 de enero de 2020 hemos compartido momentos, recuerdos, risas y una historia que seguimos construyendo juntos. ❤️",
 
-    momentos: [
-
-        {
-            foto: "imagenes/foto1.png",
-            fecha: "Un recuerdo especial ❤️",
-            titulo: "Tú y yo",
-            texto: "Un momento que guardamos para siempre en nuestros corazones."
-        },
-
-        {
-            foto: "imagenes/foto2.png",
-            fecha: "Nuestros recuerdos ❤️",
-            titulo: "Momentos juntos",
-            texto: "Cada fotografía guarda un recuerdo especial de nuestra historia."
-        },
-
-        {
-            foto: "imagenes/foto3.png",
-            fecha: "Momentos inolvidables ❤️",
-            titulo: "Siempre juntos",
-            texto: "Hemos compartido momentos hermosos que siempre llevaremos en el corazón."
-        },
-
-        {
-            foto: "imagenes/foto4.png",
-            fecha: "Nuestra historia continúa ❤️",
-            titulo: "Mucho más por vivir",
-            texto: "Y todavía nos quedan muchísimos recuerdos por crear juntos."
-        }
-
-    ],
-
     carta: {
-
-        saludo: "Para mi morenito ❤️",
+        saludo: "Para ti, mi amor ❤️",
 
         parrafo1:
-            "Hoy quiero recordar todo lo bonito que hemos vivido juntos y agradecer por cada momento que hemos compartido.",
+            "Gracias por cada momento compartido, por las risas, los recuerdos y por todo lo que hemos vivido juntos.",
 
         parrafo2:
-            "Nuestra historia está llena de recuerdos especiales, momentos difíciles que superamos y momentos hermosos que siempre llevaré en mi corazón.",
+            "Nuestra historia está llena de momentos que siempre voy a guardar en mi corazón.",
 
         parrafo3:
-            "Te amo y deseo que sigamos creando muchos recuerdos más juntos. Feliz aniversario, mi amor. ❤️",
+            "Espero que sigamos escribiendo muchos capítulos más juntos. Te amo. ❤️",
 
         firma: "Con todo mi amor ❤️"
-
     },
 
-    fechaInicio: "2020-01-11",
+    fotos: [
+        "imagenes/foto1.png",
+        "imagenes/foto2.png",
+        "imagenes/foto3.png",
+        "imagenes/foto4.png"
+    ],
 
     musica: "musica/cancion.mp3"
-
 };
