@@ -1,9 +1,5 @@
 const datosCliente = {
 
-    // =========================
-    // DATOS PRINCIPALES
-    // =========================
-
     tema: "romantico",
 
     nombre: "Tu morenito",
@@ -13,20 +9,10 @@ const datosCliente = {
     mensajePortada:
         "Feliz aniversario, mi amor ❤️ Gracias por cada momento, cada recuerdo y por todo lo que hemos construido juntos.",
 
-
-    // =========================
-    // NUESTRA HISTORIA
-    // =========================
-
     tituloHistoria: "Nuestra historia",
 
     mensajeHistoria:
         "Desde aquel 11 de enero de 2020 hemos compartido momentos, recuerdos, risas y una historia que seguimos construyendo juntos. ❤️",
-
-
-    // =========================
-    // MOMENTOS Y FOTOS
-    // =========================
 
     momentos: [
 
@@ -39,31 +25,26 @@ const datosCliente = {
 
         {
             foto: "imagenes/foto2.png",
-            fecha: "Un momento más juntos ❤️",
-            titulo: "Nuestros recuerdos",
-            texto: "Cada fotografía guarda una historia y un momento especial de nuestra relación."
+            fecha: "Nuestros recuerdos ❤️",
+            titulo: "Momentos juntos",
+            texto: "Cada fotografía guarda un recuerdo especial de nuestra historia."
         },
 
         {
             foto: "imagenes/foto3.png",
             fecha: "Momentos inolvidables ❤️",
             titulo: "Siempre juntos",
-            texto: "Hemos compartido momentos hermosos que siempre formarán parte de nuestra historia."
+            texto: "Hemos compartido momentos hermosos que siempre llevaremos en el corazón."
         },
 
         {
             foto: "imagenes/foto4.png",
-            fecha: "Hasta aquí y mucho más ❤️",
-            titulo: "Nuestra historia continúa",
-            texto: "Y lo mejor es que todavía nos quedan muchísimos recuerdos por crear juntos."
+            fecha: "Nuestra historia continúa ❤️",
+            titulo: "Mucho más por vivir",
+            texto: "Y todavía nos quedan muchísimos recuerdos por crear juntos."
         }
 
     ],
-
-
-    // =========================
-    // CARTA
-    // =========================
 
     carta: {
 
@@ -82,17 +63,7 @@ const datosCliente = {
 
     },
 
-
-    // =========================
-    // FECHA DE INICIO
-    // =========================
-
     fechaInicio: "2020-01-11",
-
-
-    // =========================
-    // MÚSICA
-    // =========================
 
     musica: "musica/cancion.mp3"
 
