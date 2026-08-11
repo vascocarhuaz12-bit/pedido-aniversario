@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Un regalo para ti ❤️</title>
+
+    <title>Para ti ❤️</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,11 +14,13 @@
     <!-- PORTADA -->
     <section class="inicio" id="inicio">
 
-        <h1 id="tituloPortada">Hay algo que quiero decirte...</h1>
+        <p class="pequeno">PARA TI ❤️</p>
 
-<p class="nombre-persona" id="nombrePersona"></p>
+        <h1>Hay algo que quiero decirte...</h1>
 
-        <p id="mensajePortada">Hice esto especialmente para ti ❤️</p>
+        <p id="nombrePersona"></p>
+
+        <p id="mensajePortada"></p>
 
         <button id="boton">
             Descubrir sorpresa ❤️
@@ -26,164 +29,135 @@
     </section>
 
 
-    <!-- CONTENIDO DEL REGALO -->
+    <!-- REGALO -->
     <main class="regalo" id="regalo">
 
+        <!-- HISTORIA -->
         <section class="primera-seccion">
 
             <p class="pequeno">PARA TI ❤️</p>
 
-            <h2 id="tituloHistoria">Nuestra historia</h2>
+            <h2 id="tituloHistoria"></h2>
 
-            <p class="mensaje" id="mensajeHistoria">
-                Algunas personas llegan a nuestra vida
-                y terminan convirtiéndose en nuestro lugar favorito.
-            </p>
+            <p class="mensaje" id="mensajeHistoria"></p>
 
-            <img id="fotoPrincipal" src="imagenes/principal.png" alt="Nuestra foto">
+            <img
+                id="fotoPrincipal"
+                src="imagenes/principal.png"
+                alt="Nuestra foto"
+            >
 
         </section>
-<!-- NUESTRA HISTORIA -->
-<section class="historia">
 
-    <p class="pequeno">NUESTROS MOMENTOS</p>
-    <h2>Cómo llegamos hasta aquí ❤️</h2>
 
-    <div class="timeline" id="timeline">
+        <!-- CRONÓMETRO -->
+        <section class="contador">
 
-        
+            <p class="pequeno">DESDE QUE TODO COMENZÓ ❤️</p>
 
-    </div>
+            <h2>Juntos desde el 11 de enero de 2020</h2>
 
-</section>
-<!-- CARTA SORPRESA -->
-<section class="seccion-carta">
+            <div class="contador-grid">
 
-    <p class="pequeno">TENGO ALGO MÁS PARA TI</p>
-    <h2>Una carta que nunca quiero olvidar</h2>
+                <div>
+                    <strong id="años">0</strong>
+                    <span>Años</span>
+                </div>
 
-    <div class="sobre" id="sobre">
-        <div class="corazon">❤️</div>
-        <p>Toca para abrir</p>
-    </div>
+                <div>
+                    <strong id="meses">0</strong>
+                    <span>Meses</span>
+                </div>
 
-    <div class="carta" id="carta">
+                <div>
+                    <strong id="dias">0</strong>
+                    <span>Días</span>
+                </div>
 
-        <p class="fecha-carta">Para ti, siempre ❤️</p>
+                <div>
+                    <strong id="horas">0</strong>
+                    <span>Horas</span>
+                </div>
 
-        <h3 id="saludoCarta">Mi amor,</h3>
+                <div>
+                    <strong id="minutos">0</strong>
+                    <span>Minutos</span>
+                </div>
 
-        <p id="cartaParrafo1">
-    Si estás leyendo esto, significa que llegaste
-    hasta una de mis partes favoritas de este regalo.
-</p>
+                <div>
+                    <strong id="segundos">0</strong>
+                    <span>Segundos</span>
+                </div>
 
-<p id="cartaParrafo2">
-    Quería recordarte lo importante que eres para mí.
-    Gracias por cada momento, cada risa y cada recuerdo
-    que hemos construido juntos.
-</p>
+            </div>
 
-<p id="cartaParrafo3">
-    Tal vez esta página algún día termine,
-    pero nuestra historia todavía tiene muchísimo
-    por escribir.
-</p>
+        </section>
 
-        <p class="firma">
-            
-            <strong id="firmaCarta">Tu persona favorita ❤️</strong>
-        </p>
 
-    </div>
+        <!-- FOTOS -->
+        <section class="historia">
 
-</section>
-<!-- CONTADOR -->
-<section class="seccion-contador">
+            <p class="pequeno">NUESTROS MOMENTOS</p>
 
-    <p class="pequeno">DESDE QUE TODO COMENZÓ</p>
+            <h2>Cómo llegamos hasta aquí ❤️</h2>
 
-    <h2>Nuestro tiempo juntos ❤️</h2>
+            <div class="galeria" id="galeria"></div>
 
-    <p class="texto-contador">
-        Desde aquel día, cada segundo contigo cuenta.
-    </p>
+        </section>
 
-    <div class="contador">
 
-        <div class="tiempo">
-            <span id="anios">0</span>
-            <p>Años</p>
-        </div>
+        <!-- CARTA -->
+        <section class="seccion-carta">
 
-        <div class="tiempo">
-            <span id="meses">0</span>
-            <p>Meses</p>
-        </div>
+            <p class="pequeno">TENGO ALGO MÁS PARA TI</p>
 
-        <div class="tiempo">
-            <span id="dias">0</span>
-            <p>Días</p>
-        </div>
+            <h2>Una carta que nunca quiero olvidar</h2>
 
-        <div class="tiempo">
-            <span id="horas">0</span>
-            <p>Horas</p>
-        </div>
+            <div class="sobre" id="sobre">
 
-        <div class="tiempo">
-            <span id="minutos">0</span>
-            <p>Minutos</p>
-        </div>
+                <div class="corazon">❤️</div>
 
-        <div class="tiempo">
-            <span id="segundos">0</span>
-            <p>Segundos</p>
-        </div>
+                <p>Toca para abrir</p>
 
-    </div>
+            </div>
 
-    <p class="y-contando">Y contando... ❤️</p>
 
-</section>
-<!-- FINAL -->
-<section class="final">
+            <div class="carta" id="carta">
 
-    <div class="final-contenido">
+                <p class="fecha-carta">
+                    Para ti, siempre ❤️
+                </p>
 
-        <p class="pequeno">Y ANTES DE TERMINAR...</p>
+                <h3 id="saludoCarta"></h3>
 
-        <h2>
-            Elegiría vivir<br>
-            todo esto contigo<br>
-            otra vez. ❤️
-        </h2>
+                <p id="cartaParrafo1"></p>
 
-        <p class="final-texto">
-            Gracias por formar parte de mi historia.
-            Esto solo es un pequeño recuerdo de todo
-            lo que todavía nos queda por vivir.
-        </p>
+                <p id="cartaParrafo2"></p>
 
-        <div class="corazon-final">❤️</div>
+                <p id="cartaParrafo3"></p>
 
-        <p class="firma-final">
-            Siempre tú y yo.
-        </p>
+                <p class="firma" id="firmaCarta"></p>
 
-    </div>
+            </div>
 
-</section>
+        </section>
+
     </main>
 
-<audio id="musica" loop></audio>
 
-<button class="control-musica" id="controlMusica">
-    🔊
-</button>
-<script src="datos.js?v=2"></script>
+    <!-- MÚSICA -->
+    <audio id="musica" loop>
+        <source src="musica/cancion.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <button id="controlMusica" class="control-musica">
+        🔊
+    </button>
+
+
+    <script src="datos.js"></script>
     <script src="script.js"></script>
 
 </body>
-
 </html>
