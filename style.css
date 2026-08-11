@@ -1,0 +1,1209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0d0508;
+    color: white;
+}
+
+.inicio {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 30px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Oscurecemos la foto para poder leer el texto */
+
+.inicio::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.75)
+        ),
+        url("imagenes/foto1.png");
+
+    background-size: cover;
+    background-position: center;
+
+    z-index: -1;
+}
+
+/* Título */
+
+.inicio h1 {
+    font-size: clamp(40px, 7vw, 80px);
+    max-width: 900px;
+    margin-bottom: 20px;
+
+    text-shadow: 0 4px 25px rgba(0,0,0,0.8);
+}
+
+/* Texto */
+
+.inicio p {
+    font-size: 20px;
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
+
+/* Ocultamos la foto original */
+
+.inicio img {
+    display: none;
+}
+
+/* Botón */
+
+.inicio button {
+    border: 1px solid rgba(255,255,255,0.4);
+
+    background: rgba(255,255,255,0.15);
+    color: white;
+
+    padding: 16px 30px;
+
+    border-radius: 50px;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+.inicio button:hover {
+    background: white;
+    color: #111;
+    transform: scale(1.05);
+}/* =========================
+   CONTENIDO DEL REGALO
+========================= */
+
+.regalo {
+    display: none;
+    background: #fff8f6;
+    color: #2b171b;
+    min-height: 100vh;
+}
+
+.regalo.mostrar {
+    display: block;
+}
+.regalo.mostrar .primera-seccion img {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+.primera-seccion {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 70px 25px;
+}
+
+.pequeno {
+    font-size: 13px;
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+
+    color: #a85d68;
+}
+
+.primera-seccion h2 {
+    font-size: clamp(45px, 8vw, 90px);
+
+    margin-bottom: 25px;
+}
+
+.mensaje {
+    max-width: 600px;
+
+    font-size: 20px;
+    line-height: 1.7;
+
+    margin-bottom: 45px;
+
+    color: #70565b;
+}
+
+.primera-seccion img {
+    width: min(700px, 90%);
+
+    max-height: 600px;
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 25px 70px rgba(60, 20, 30, 0.20);
+}
+
+
+/* Animación de salida */
+
+.inicio.ocultar {
+    animation: desaparecer 0.8s forwards;
+}
+
+@keyframes desaparecer {
+
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+
+}/* =========================
+   LINEA DEL TIEMPO
+========================= */
+
+.historia {
+    padding: 100px 20px 140px;
+    background: #fff8f6;
+    text-align: center;
+}
+
+.historia > h2 {
+    font-size: clamp(35px, 6vw, 65px);
+    margin-bottom: 80px;
+}
+
+.timeline {
+    max-width: 950px;
+    margin: auto;
+}
+
+.momento {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+
+    margin-bottom: 120px;
+
+    text-align: left;
+
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 0.8s ease;
+}
+
+.momento.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.momento:nth-child(even) img {
+    order: 2;
+}
+
+.momento img {
+    width: 100%;
+    height: 430px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 25px 60px rgba(70, 30, 40, 0.15);
+}
+
+.momento-texto span {
+    color: #a85d68;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.momento-texto h3 {
+    font-size: 35px;
+
+    margin: 15px 0;
+}
+
+.momento-texto p {
+    color: #70565b;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .momento {
+        grid-template-columns: 1fr;
+        gap: 25px;
+
+        margin-bottom: 80px;
+    }
+
+    .momento:nth-child(even) img {
+        order: 0;
+    }
+
+    .momento img {
+        height: 380px;
+    }
+
+    .momento-texto {
+        text-align: center;
+    }
+
+}/* =========================
+   CARTA SORPRESA
+========================= */
+
+.seccion-carta {
+    min-height: 100vh;
+    padding: 120px 20px;
+    background: #2b171b;
+    color: white;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion-carta h2 {
+    font-size: clamp(35px, 6vw, 65px);
+    max-width: 800px;
+    margin-bottom: 50px;
+}
+
+.sobre {
+    width: 300px;
+    height: 190px;
+
+    background: #f2d4d8;
+    color: #2b171b;
+
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow: 0 30px 70px rgba(0,0,0,0.35);
+
+    transition: 0.4s;
+}
+
+.sobre:hover {
+    transform: translateY(-10px) rotate(-2deg);
+}
+
+.corazon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.sobre p {
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/* CARTA */
+
+.carta {
+    display: none;
+
+    max-width: 700px;
+
+    background: #fffaf5;
+    color: #3c282c;
+
+    padding: 60px;
+
+    border-radius: 5px;
+
+    text-align: left;
+
+    box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+
+    transform: translateY(40px);
+}
+
+.carta.abierta {
+    display: block;
+    animation: abrirCarta 1s ease forwards;
+}
+
+@keyframes abrirCarta {
+
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+.carta h3 {
+    font-size: 35px;
+    margin: 25px 0;
+}
+
+.carta p {
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 22px;
+}
+
+.fecha-carta {
+    color: #a85d68;
+    font-size: 13px !important;
+    letter-spacing: 2px;
+}
+
+.firma {
+    margin-top: 40px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .carta {
+        padding: 35px 25px;
+    }
+
+    .sobre {
+        width: 260px;
+        height: 170px;
+    }
+
+}/* =========================
+   CONTROL DE MÚSICA
+========================= */
+
+.control-musica {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(43, 23, 27, 0.9);
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    z-index: 1000;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+
+    display: none;
+
+    transition: 0.3s;
+}
+
+.control-musica:hover {
+    transform: scale(1.1);
+}/* =========================
+   CONTADOR
+========================= */
+
+.seccion-contador {
+    min-height: 100vh;
+
+    background: #fff8f6;
+    color: #2b171b;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 100px 20px;
+}
+
+.seccion-contador h2 {
+    font-size: clamp(40px, 7vw, 75px);
+    margin-bottom: 20px;
+}
+
+.texto-contador {
+    color: #70565b;
+    font-size: 18px;
+
+    margin-bottom: 60px;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    max-width: 1000px;
+}
+
+.tiempo {
+    width: 130px;
+
+    padding: 30px 15px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(70, 30, 40, 0.10);
+}
+
+.tiempo span {
+    display: block;
+
+    font-size: 45px;
+    font-weight: bold;
+
+    color: #a85d68;
+
+    margin-bottom: 8px;
+}
+
+.tiempo p {
+    font-size: 13px;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    color: #70565b;
+}
+
+.y-contando {
+    margin-top: 45px;
+
+    font-size: 18px;
+
+    color: #a85d68;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .contador {
+        gap: 10px;
+    }
+
+    .tiempo {
+        width: 105px;
+        padding: 22px 10px;
+    }
+
+    .tiempo span {
+        font-size: 35px;
+    }
+
+    .tiempo p {
+        font-size: 10px;
+    }
+
+}/* =========================
+   FINAL
+========================= */
+
+.final {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #4a2028 0%,
+            #2b171b 45%,
+            #13090c 100%
+        );
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 100px 25px;
+}
+
+.final-contenido {
+    max-width: 850px;
+}
+
+.final h2 {
+    font-size: clamp(45px, 8vw, 90px);
+    line-height: 1.05;
+
+    margin: 25px 0 35px;
+}
+
+.final-texto {
+    max-width: 600px;
+
+    margin: auto;
+
+    font-size: 19px;
+    line-height: 1.8;
+
+    color: rgba(255,255,255,0.75);
+}
+
+.corazon-final {
+    font-size: 55px;
+
+    margin: 45px 0 25px;
+
+    animation: latido 1.5s infinite;
+}
+
+@keyframes latido {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+}
+
+.firma-final {
+    font-size: 18px;
+    font-style: italic;
+
+    color: rgba(255,255,255,0.7);
+}
+.nombre-persona {
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 15px 0;
+    opacity: 0.75;
+}
+
+/* NUEVA TIPOGRAFÍA */
+
+body {
+    font-family: Georgia, serif;
+}
+
+p,
+span,
+button {
+    font-family: Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, serif;
+}
+/* ==================================
+   TEMA ROMÁNTICO ELEGANTE
+================================== */
+
+:root {
+    --color-fondo: #fff8f6;
+    --color-fondo-secundario: #f8e8e4;
+    --color-principal: #9f4050;
+    --color-principal-oscuro: #71303c;
+    --color-texto: #3d2b2e;
+    --color-suave: #b9848d;
+    --color-blanco: #ffffff;
+}
+
+/* Fondo general */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* Títulos */
+h1,
+h2,
+h3 {
+    color: var(--color-principal-oscuro);
+}
+
+/* Textos pequeños y fechas */
+.pequeno,
+.momento-texto span {
+    color: var(--color-principal);
+}
+
+/* Botón principal */
+#boton {
+    background: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+#boton:hover {
+    background: var(--color-principal-oscuro);
+}
+
+/* Sección de la carta */
+.seccion-carta {
+    background-color: var(--color-fondo-secundario);
+}
+
+/* Carta */
+.carta {
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+}
+
+/* Contador */
+.seccion-contador {
+    background-color: var(--color-fondo-secundario);
+}
+/* ==================================
+   PORTADA PREMIUM
+================================== */
+
+.inicio {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 40px 25px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #f7dfe1 0%,
+            #fff8f6 45%,
+            #fffaf8 100%
+        );
+}
+
+/* Título principal */
+.inicio h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(2.7rem, 8vw, 5rem);
+    line-height: 1.05;
+
+    max-width: 750px;
+    margin: 0 auto 20px;
+
+    color: #71303c;
+}
+
+/* Nombre de la persona */
+.nombre-persona {
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: #9f4050;
+
+    margin-bottom: 22px;
+}
+
+/* Mensaje de portada */
+#mensajePortada {
+    max-width: 550px;
+
+    font-size: 1rem;
+    line-height: 1.8;
+
+    color: #6e5559;
+
+    margin: 0 auto 35px;
+}
+
+/* Botón descubrir */
+#boton {
+    border: none;
+
+    padding: 16px 30px;
+
+    border-radius: 50px;
+
+    background: #9f4050;
+    color: white;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 30px rgba(113, 48, 60, 0.20);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+#boton:hover {
+    background: #71303c;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 15px 35px rgba(113, 48, 60, 0.28);
+}
+/* ==================================
+   HISTORIA + RECUERDOS PREMIUM
+================================== */
+
+/* Sección de historia */
+.historia {
+    padding: 90px 20px;
+    background: #fffaf8;
+}
+
+/* Título de la historia */
+.historia h2 {
+    text-align: center;
+    font-size: clamp(2.5rem, 7vw, 4rem);
+    margin-bottom: 15px;
+    color: #71303c;
+}
+
+/* Texto introductorio */
+#mensajeHistoria {
+    max-width: 650px;
+    margin: 0 auto 70px;
+    text-align: center;
+
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #765e62;
+}
+
+
+/* CADA RECUERDO */
+.momento {
+    max-width: 900px;
+    margin: 0 auto 80px;
+
+    background: white;
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 45px rgba(113, 48, 60, 0.10);
+}
+
+
+/* FOTOS */
+.momento img {
+    width: 100%;
+    height: 500px;
+
+    object-fit: cover;
+    display: block;
+}
+
+
+/* TEXTO DE CADA RECUERDO */
+.momento-texto {
+    padding: 35px;
+}
+
+
+/* Fecha */
+.momento-texto span {
+    display: block;
+
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+
+    color: #9f4050;
+}
+
+
+/* Título */
+.momento-texto h3 {
+    font-size: 2rem;
+
+    margin: 0 0 15px;
+
+    color: #71303c;
+}
+
+
+/* Descripción */
+.momento-texto p {
+    line-height: 1.8;
+
+    color: #6e5559;
+
+    margin: 0;
+}
+
+
+/* ADAPTACIÓN PARA CELULAR */
+
+@media (max-width: 600px) {
+
+    .historia {
+        padding: 70px 18px;
+    }
+
+    .momento {
+        margin-bottom: 45px;
+        border-radius: 18px;
+    }
+
+    .momento img {
+        height: 390px;
+    }
+
+    .momento-texto {
+        padding: 25px 22px 30px;
+    }
+
+    .momento-texto h3 {
+        font-size: 1.7rem;
+    }
+
+}
+/* ==================================
+   CONTADOR PREMIUM
+================================== */
+
+.seccion-contador {
+    padding: 90px 20px;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f8e8e4 0%,
+            #fff8f6 100%
+        );
+}
+
+.seccion-contador h2 {
+    font-size: clamp(2.4rem, 7vw, 3.8rem);
+    margin-bottom: 15px;
+    color: #71303c;
+}
+
+/* Contenedor de los números */
+.contador {
+    max-width: 750px;
+    margin: 45px auto 0;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+/* Cada número */
+.contador div {
+    min-width: 100px;
+
+    padding: 22px 15px;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    border: 1px solid rgba(159, 64, 80, 0.10);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(113, 48, 60, 0.08);
+}
+
+/* Número */
+.contador span {
+    display: block;
+
+    font-family: Georgia, serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+
+    color: #9f4050;
+
+    margin-bottom: 5px;
+}
+
+/* Texto: años, meses, días... */
+.contador p {
+    margin: 0;
+
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #80666b;
+}
+
+@media (max-width: 600px) {
+
+    .seccion-contador {
+        padding: 70px 15px;
+    }
+
+    .contador {
+        gap: 10px;
+    }
+
+    .contador div {
+        min-width: 90px;
+        padding: 18px 10px;
+    }
+
+    .contador span {
+        font-size: 1.9rem;
+    }
+
+}
+/* ==================================
+   CARTA PREMIUM
+================================== */
+
+.seccion-carta {
+    padding: 100px 20px;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #f6dddd 0%,
+            #f8e8e4 45%,
+            #fff8f6 100%
+        );
+}
+
+.seccion-carta h2 {
+    font-size: clamp(2.5rem, 7vw, 4rem);
+    color: #71303c;
+    margin-bottom: 15px;
+}
+
+
+/* ==============================
+   SOBRE
+============================== */
+
+.sobre {
+    width: 280px;
+    height: 180px;
+
+    margin: 50px auto 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #9f4050;
+
+    border-radius: 8px 8px 18px 18px;
+
+    box-shadow:
+        0 18px 45px rgba(113, 48, 60, 0.25);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.sobre:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 25px 55px rgba(113, 48, 60, 0.32);
+}
+
+
+/* Corazón del sobre */
+
+.sobre::after {
+    content: "♥";
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: #fff8f6;
+
+    color: #9f4050;
+
+    font-size: 1.8rem;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ==============================
+   CARTA ABIERTA
+============================== */
+
+.carta {
+    max-width: 680px;
+
+    margin: 45px auto 0;
+
+    padding: 55px 50px;
+
+    text-align: left;
+
+    background: #fffdf8;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 20px 60px rgba(90, 50, 55, 0.16);
+
+    color: #49383b;
+
+    line-height: 1.9;
+}
+
+
+/* Saludo */
+
+.carta h3 {
+    font-family: Georgia, serif;
+
+    font-size: 2rem;
+
+    color: #71303c;
+
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+
+/* Párrafos */
+
+.carta p {
+    font-size: 1rem;
+
+    line-height: 2;
+
+    margin-bottom: 22px;
+
+    color: #574649;
+}
+
+
+/* Firma */
+
+.carta .firma {
+    margin-top: 40px;
+    margin-bottom: 0;
+
+    text-align: right;
+
+    font-family: Georgia, serif;
+    font-size: 1.25rem;
+
+    color: #9f4050;
+}
+
+
+/* ==============================
+   CELULAR
+============================== */
+
+@media (max-width: 600px) {
+
+    .seccion-carta {
+        padding: 75px 18px;
+    }
+
+    .sobre {
+        width: 240px;
+        height: 155px;
+
+        margin-top: 40px;
+    }
+
+    .carta {
+        padding: 40px 27px;
+
+        margin-top: 35px;
+
+        border-radius: 3px;
+    }
+
+    .carta h3 {
+        font-size: 1.7rem;
+    }
+
+    .carta p {
+        font-size: 0.95rem;
+        line-height: 1.9;
+    }
+
+}
